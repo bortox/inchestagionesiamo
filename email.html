@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Proponi un'idea</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+* {
+  box-sizing: border-box;
+  font-family: Comfortaa;
+  font-size: 15px;
+}
+body {
+  
+  text-align: center;
+  background-color: #412cc9;
+  padding: 2.5rem 2rem;
+}
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: white;
+}
+input[type=text], select, textarea, input[type=email] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit],.button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin-left: 1em;
+  text-decoration: none;
+  margin-bottom: .5em;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  margin: .5em;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit], .button {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1>Proponi un' idea</h1>
+<div class="container">
+  <form action="https://formspree.io/f/xleabllk" method="POST">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Email</label>
+      </div>
+      <div class="col-75">
+        <input type="email" id="fname" name="email" placeholder="La tua email" required>
+      </div>
+    </div>    
+     <div class="row">
+      <div class="col-25">
+        <label for="whattochange">Cosa</label>
+      </div>
+      <div class="col-75">
+        <textarea id="whattochange" name="whattochange" placeholder="Di cosa si tratta?" style="height:80px" required></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="howtochange">Come</label>
+      </div>
+      <div class="col-75">
+        <textarea id="howtochange" name="howtochange" placeholder="In che modo renderesti realta tale idea?" style="height:120px" required></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Invia proposta">
+      <a class="button" href="/inchestagionesiamo/index.html" style="background-color: #eba134">Torna al menu</a>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>

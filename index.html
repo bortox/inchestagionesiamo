@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="refresh" content="15" />
+<title>In che stagione siamo? | Estate, Primavera, Autunno o Inverno? Conto alla rovescia</title>
+<meta name="generator" content="Jekyll v4.2.0">
+<meta property="og:title" content="In che stagione siamo? | Estate, Primavera, Autunno o Inverno? Conto alla rovescia">
+<meta name="author" content="Andrea Bortolotti Bortox">
+<meta property="og:locale" content="it_IT">
+<meta name="description" content="Conto alla rovescia ed immagini gratuite da Unsplash API per mostrare in che stagione siamo al giorno d' oggi.">
+<meta property="og:description" content="Conto alla rovescia ed immagini gratuite da Unsplash API per mostrare in che stagione siamo al giorno d' oggi.">
+<meta property="og:site_name" content="In che stagione siamo?">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.Primavera {
+    background: url("https://source.unsplash.com/2100x900/?spring") springgreen;
+}
+.Estate {
+    background: url("https://source.unsplash.com/900x900/?summer")aquamarine;
+}
+.Autunno {
+    background: url("https://source.unsplash.com/900x900/?fall")burlywood;
+}
+.Inverno {
+    background: url("https://source.unsplash.com/900x900/?winter")azure;
+}
+html, body {
+    height: 100%;
+}
+body {
+    /* Full height */
+    height: 100%;
+    margin: 0;
+    /* Center and scale the image nicely */
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    font-family: 'Brush Script MT', cursive;
+}
+.parent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+#seasontitle {
+    font-size: calc( 2em + 10vw);
+    text-shadow: 0px 0px 8px #fff;
+    line-height: 0;
+}
+#missingstr {
+    font-size: calc(1.4em + 1vw);
+    text-shadow: 0px 0px 8px #000;
+    color: #fff;
+    line-height: 1em;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  font-size: 16px;
+}
+button {
+    background-color: rgba(255,255,255,0.1);
+    border: none;
+    border-radius: 0px 0px 40px 0px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  margin-bottom: 100px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Autore e foto</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2> Autore</h2>
+    <p>Sito web open-source creato da Andrea Bortolotti. Per altri progetti, consulta il mio profilo GitHub </p>
+    <p> Se ti servono versioni di latino o altri compiti scolastici, per ripassare o semplicemente copiare, puoi andare su <a href="https://bortox.github.io/Compiti-scolastici/">https://bortox.github.io/Compiti-scolastici/</a></p>
+    <h2> Foto </h2>
+    <p>Tutte le foto e gli sfondi presenti in questo sito sono derivate da UnSplash, una comunità di artisti con oltre un milione di immagini disponibili gratuitamente. Questo sito usa la API ( Interfaccia di Programmazione di Applicazione ) di Unsplash.  </p>
+    <h2> Sito </h2>
+    <p> Questo sito web è ospitato gratuitamente sui server di Github ed il codice è stato scritto da me, scopiazzandone una buona parte parte da forum online. </p>
+    <h2> Scopo del sito web</h2>
+    <p> In che stagione ci troviamo oggi? Quanti giorni mancano all' estate? Quanti mesi mancano all' autunno?</p>
+    <p> Domande che spesso ci poniamo, per trovare risposta bisogna fare noiosi calcoli mentali oppure guardare un sito pieno zeppo di fastidiose pubblicità.</p>
+    <p> È qui che entra in gioco <i>inchestagionesiamo</i>: la tua domanda troverà risposta velocemente garantendo anche piacere al tuo occhio, per la qualità delle immagini selezionate da Unsplash. Nostalgia della tua stagione preferita? Puoi visitare questo sito web ogni giorno aspettandola. </p>
+    <h2> Come aiutare </h2>
+    <p>-  Se mastichi <i>HTML</i>, <i>CSS</i> e <i>Javascript</i> potresti aiutarmi nella stesura del codice. Ecco il <a href="https://github.com/bortox/inchestagionesiamo">link per la repo</a> su GitHub.</p>
+    <p>- Se hai un'idea in mente, puoi scrivermi una mail <a href="/inchestagionesiamo/email.html">su questa pagina</a></p>
+    <p>- Se ti <b>piace</b> il progetto, <b>condividilo</b> con le tue amike del cuore!</p>
+
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<section class="parent">
+    <div class="child">
+        <h1 id="seasontitle">In che stagione siamo?</h1>
+        <h2 id="missingstr"> C'è qualche problema con Javascript...</h2>
+    </div>
+</section>
+
+<script>
+Date.fromJulian = function (j) {
+    j = (+j) + (30.0 / (24 * 60 * 60));
+    var A = Date.julianArray(j, true);
+    return new Date(Date.UTC.apply(Date, A));
+};
+Date.julianArray = function (j, n) {
+    var F = Math.floor;
+    var j2, JA, a, b, c, d, e, f, g, h, z;
+    j += 0.5;
+    j2 = (j - F(j)) * 86400.0;
+    z = F(j);
+    f = j - z;
+    if (z < 2299161) a = z;
+    else {
+        g = F((z - 1867216.25) / 36524.25);
+        a = z + 1 + g - F(g / 4);
+    }
+    b = a + 1524;
+    c = F((b - 122.1) / 365.25);
+    d = F(365.25 * c);
+    e = F((b - d) / 30.6001);
+    h = F((e < 14) ? (e - 1) : (e - 13));
+    JA = [F((h > 2) ? (c - 4716) : (c - 4715)),
+    h - 1, F(b - d - F(30.6001 * e) + f)];
+    var JB = [F(j2 / 3600), F((j2 / 60) % 60), Math.round(j2 % 60)];
+    JA = JA.concat(JB);
+    if (typeof n == 'number') return JA.slice(0, n);
+    return JA;
+};
+Date.getSeasons = function (y, wch) {
+    y = y || new Date().getFullYear();
+    if (y < 1000 || y > 3000) throw y + ' is out of range';
+    var Y1 = (y - 2000) / 1000,
+        Y2 = Y1 * Y1,
+        Y3 = Y2 * Y1,
+        Y4 = Y3 * Y1;
+    var jd, t, w, d, est = 0,
+        i = 0,
+        Cos = Math.degCos,
+        A = [y],
+        e1 = [485, 203, 199, 182, 156, 136, 77, 74, 70, 58, 52, 50, 45, 44, 29, 18, 17, 16, 14, 12, 12, 12, 9, 8],
+        e2 = [324.96, 337.23, 342.08, 27.85, 73.14, 171.52, 222.54, 296.72, 243.58, 119.81, 297.17, 21.02,
+        247.54, 325.15, 60.93, 155.12, 288.79, 198.04, 199.76, 95.39, 287.11, 320.81, 227.73, 15.45],
+        e3 = [1934.136, 32964.467, 20.186, 445267.112, 45036.886, 22518.443,
+        65928.934, 3034.906, 9037.513, 33718.147, 150.678, 2281.226,
+        29929.562, 31555.956, 4443.417, 67555.328, 4562.452, 62894.029,
+        31436.921, 14577.848, 31931.756, 34777.259, 1222.114, 16859.074];
+    while (i < 4) {
+        switch (i) {
+            case 0:
+                jd = 2451623.80984 + 365242.37404 * Y1 + 0.05169 * Y2 - 0.00411 * Y3 - 0.00057 * Y4;
+                break;
+            case 1:
+                jd = 2451716.56767 + 365241.62603 * Y1 + 0.00325 * Y2 + 0.00888 * Y3 - 0.00030 * Y4;
+                break;
+            case 2:
+                jd = 2451810.21715 + 365242.01767 * Y1 - 0.11575 * Y2 + 0.00337 * Y3 + 0.00078 * Y4;
+                break;
+            case 3:
+                jd = 2451900.05952 + 365242.74049 * Y1 - 0.06223 * Y2 - 0.00823 * Y3 + 0.00032 * Y4;
+                break;
+        }
+        t = (jd - 2451545.0) / 36525;
+        w = 35999.373 * t - 2.47;
+        d = 1 + 0.0334 * Cos(w) + 0.0007 * Cos(2 * w);
+        est = 0;
+        for (var n = 0; n < 24; n++) {
+            est += e1[n] * Cos(e2[n] + (e3[n] * t));
+        }
+        jd += (0.00001 * est) / d;
+        A[++i] = Date.fromJulian(jd);
+    }
+    return wch && A[wch] ? A[wch] : A;
+};
+Math.degRad = function (d) {
+    return (d * Math.PI) / 180.0;
+};
+Math.degSin = function (d) {
+    return Math.sin(Math.degRad(d));
+};
+Math.degCos = function (d) {
+    return Math.cos(Math.degRad(d));
+};
+
+console.log(Date.getSeasons());
+
+seasonalBackground = function () {
+    var mine = Date.getSeasons();
+    today = new Date; //per testare altre Date devi cambiare tutto il codice perché sono diversamente intelligente
+    firstSpring = mine[1];
+    firstSummer = mine[2];
+    firstFall = mine[3];
+    firstWinter = mine[4];
+    console.log(today)
+    console.log(firstSpring,firstSummer,firstWinter,firstFall);
+    console.log(today-firstWinter)
+    var season = '';
+    var h1 = document.getElementsByTagName("h1")[0];
+    if (today >= firstSpring && today < firstSummer) {
+        season = 'Primavera';
+        left = Math.floor((firstSummer-today)/86400000);
+        text = `-${left} giorni all' estate ${today.getFullYear()}`
+    } else if (today >= firstSummer && today < firstFall) {
+        left = Math.floor((firstFall-today)/86400000);
+        text = `-${left} giorni all' autunno ${today.getFullYear()}`
+    } else if (today >= firstFall && today < firstWinter) {
+        season = 'Autunno';
+        left = Math.floor((firstWinter-today)/86400000);
+        text = `-${left} giorni all' inverno ${today.getFullYear()}`
+    } else if (today >= firstWinter || today < firstSpring) {
+        season = 'Inverno';
+        left = Math.floor((firstSpring-today)/86400000);
+        if (left <= 0) {
+            mine = Date.getSeasons(today.getFullYear()+1);
+            left = Math.floor((mine[1]-today)/86400000);
+            text = `-${left} giorni alla primavera ${today.getFullYear()+1}`
+        }
+        else {
+            text = `-${left} giorni alla primavera ${today.getFullYear()}`
+        }
+    }
+    document.title = 'Stagione corrente ' + season;
+    document.body.className = season;
+    document.getElementById("seasontitle").innerHTML=season;
+    if (left > 0) {
+        document.getElementById("missingstr").innerHTML=text;
+    } 
+    else {
+    }
+    
+}
+
+seasonalBackground();
+</script>
+</body>
+</html>
