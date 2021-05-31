@@ -53,6 +53,11 @@
 html, body {
     height: 100%;
 }
+@font-face {
+    font-family: 'Z003';
+    src: url('Z003-MediumItalic.woff2');
+    font-display: swap;
+}
 body {
     /* Full height */
     height: 100%;
@@ -61,7 +66,7 @@ body {
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
-    font-family: 'Brush Script MT', cursive;
+    font-family: 'Z003', 'Brush Script MT', cursive;
 }
 .parent {
     position: absolute;
@@ -75,12 +80,16 @@ body {
     font-size: calc( 2em + 10vw);
     text-shadow: 0px 0px 8px #fff;
     line-height: 0;
+    letter-spacing: -0.01em;
+    opacity: 0.8;
+    
 }
 #missingstr {
     font-size: calc(1.4em + 1vw);
     text-shadow: 0px 0px 8px #000;
     color: #fff;
     line-height: 1em;
+    letter-spacing: -0.05em;
 }
 .modal {
   display: none; /* Hidden by default */
@@ -94,7 +103,7 @@ body {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  font-size: 18px;
+  font-size: 20px;
 }
 p {
     font-size: calc( .8em + .1vw )
@@ -118,6 +127,7 @@ button {
   margin-bottom: 100px;
   border: 1px solid #888;
   width: 80%;
+  max-width: 42em;
 }
 
 /* The Close Button */
