@@ -297,8 +297,6 @@ Math.degCos = function (d) {
     return Math.cos(Math.degRad(d));
 };
 
-console.log(Date.getSeasons());
-
 seasonalBackground = function () {
     var mine = Date.getSeasons();
     today = new Date; //per testare altre Date devi cambiare tutto il codice perché sono diversamente intelligente
@@ -306,9 +304,6 @@ seasonalBackground = function () {
     firstSummer = mine[2];
     firstFall = mine[3];
     firstWinter = mine[4];
-    console.log(today)
-    console.log(firstSpring,firstSummer,firstWinter,firstFall);
-    console.log(today-firstWinter)
     var season = '';
     var h1 = document.getElementsByTagName("h1")[0];
     if (today >= firstSpring && today < firstSummer) {
