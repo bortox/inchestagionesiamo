@@ -324,6 +324,7 @@ seasonalBackground = function () {
         left = Math.floor((firstSummer-today)/86400000);
         text = `-${left} giorni all' estate ${today.getFullYear()}`
     } else if (today >= firstSummer && today < firstFall) {
+    	season = 'Estate';
         left = Math.floor((firstFall-today)/86400000);
         text = `-${left} giorni all' autunno ${today.getFullYear()}`
     } else if (today >= firstFall && today < firstWinter) {
